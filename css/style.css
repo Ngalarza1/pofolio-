@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@100 & display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html{
+    font-size: 100%;
+
+}
+body{
+    background-color: beige;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    flex-direction:row;
+}
+.tamañoDecaja1{
+    width: 6rem;
+    height: 10vh;
+    margin: 100px 1px;
+    padding: 1rem 3rem; 
+    background: rgb(238,174,202);
+    text-decoration: none;
+    text-align: center;
+}
+nav{
+   background-color: grey;
+   position: sticky;
+   height: 20vh;
+   padding: 10px;
+   margin: auto ;
+   display: flex;
+   justify-content:space-between;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+    nav ul li{
+        display: flex;
+        justify-content: flex-end;
+        
+
+    }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            margin: 5rem;
+        }
+        nav ul li a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+.linear-gradient{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border: solid gray 5px; 
+
+}
+.fotolog{
+    height: 200px;
+    width: 200px;
+    margin: 5rem;
+    display: flex;
+    justify-items: center;
+}
+.conteinerbotton{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border: solid gray 5px;
+    color: azure;
+    padding-bottom: 1rem;
+    margin: 10rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.tranform:hover{
+    transform: translate(50px) ;
+    cursor: pointer;
+    transition: transform 1s;
+}
+.rotate:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+    transition: transform 2s
+}
+.scale:hover{
+    transform: scaleX(1.2);
+    cursor: transform 2s;
+}
+.skew:hover{
+    transform: .skew(20deg);
+    cursor: pointer;
+    transition: transform 2s;
+}
+@keyframes Animasion{
+    0%{width: 100px; background-color: violet;}
+    50%{width: 200px;background-color: deeppink;}
+    100%{width: 400px;background-color: bisque;}
+}
+.animate{
+ animation-name: Animasion;
+ animation-duration: 5s;
+ animation-iteration-count:infinite;
+ animation-timing-function: ease-in-out;
+ animation-delay: 2s;
+}
+#galeria{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: (5,auto);
+    grid-template-areas: 
+    "foto1"
+    "foto2"
+    "foto4"
+    "foto5"
+    "foto6"
+}
+.fot-1 img,
+.fot-2 img,
+.fot-4 img,
+.fot-5 img,
+.fot-6 img {
+    margin: 30px;
+    height: 30vh;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    animation-name: textAlpha;
+    animation-duration: 2s;
+} 
+   
+ @media (min-width:320px){
+        #galeria{
+            grid-template-columns: repeat (2,1fr);
+            grid-template-rows: repeat (5, auto);
+            grid-template-areas:  
+            "foto2 foto2"
+            "foto1 foto1"
+            "foto6 foto6" 
+            "foto5 foto5"
+            "foto4 foto4" 
+            
+    
+        }
+    }
+
+@media (min-width:800px){
+        #galeria{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas:
+                "foto2 foto2 foto2"
+                "foto4 foto1 foto5"
+                "fato6 foto6 foto6"
+            
+        }
+    }
+@media (min-width:1200px){
+        #galeria{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas:
+                "foto2 foto2 foto2"
+                "foto4 foto1 foto5"
+                "fato6 foto6 foto6"
+            
+        }
+    }
